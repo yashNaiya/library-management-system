@@ -140,7 +140,7 @@ const getIssuedBoks = asyncHandler(async(req,res)=>{
     issuedDate: transaction.issuedDate
   }));
 
-  res.status(201).json({ issuedBooks });
+  res.status(200).json({ issuedBooks });
 })
 
 

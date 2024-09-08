@@ -41,7 +41,7 @@ const findBooks = asyncHandler((req,res)=>{
 
   Book.find(query)
   .then(books=>{
-    res.status(201).send(books)
+    res.status(200).send(books)
   })
   .catch(err=>{
     res.send(err)
@@ -55,7 +55,7 @@ const findBookByName = asyncHandler((req,res)=>{
 
   Book.find({name : {$regex: name, $options : "i"}})
   .then(books=>{
-    res.status(201).send(books)
+    res.status(200).send(books)
   })
   .catch(err=>{
     res.send(err)
@@ -70,7 +70,7 @@ const findBookByRange = asyncHandler((req,res)=>{
     $lte : maxRent
   }})
   .then(books=>{
-    res.status(201).send(books)
+    res.status(200).send(books)
   })
   .catch(err=>{
     res.send(err)

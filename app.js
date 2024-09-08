@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv").config()
+const cors = require(`cors`)
 const app = express();
 require(`./config/dbConnect`)
 const port = process.env.PORT
@@ -8,7 +9,7 @@ app.use("/api/users", require("./routes/userRoutes") )
 app.use("/api/books", require("./routes/bookRoutes") )
 app.use("/api/transactions", require("./routes/transactionRoutes") )
 
-const origin = ["https://yash-library-management.netlify.app", "http://localhost:5000"]
+const origin = ["https://yash-library-management-system.onrender.com", "http://localhost:5000"]
 app.use(cors({
     credentials: true,
     origin: origin,

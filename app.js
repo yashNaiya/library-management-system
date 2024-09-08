@@ -9,7 +9,7 @@ app.use("/api/users", require("./routes/userRoutes") )
 app.use("/api/books", require("./routes/bookRoutes") )
 app.use("/api/transactions", require("./routes/transactionRoutes") )
 
-const origin = ["https://yash-library-management-system.onrender.com", "http://localhost:5000"]
+const origin = ["https://library-management-system-df4t.onrender.com", "http://localhost:5000"]
 app.use(cors({
     credentials: true,
     origin: origin,

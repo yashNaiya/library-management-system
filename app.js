@@ -16,6 +16,9 @@ app.use(cors({
     preflightContinue: true,
 }));
 
+app.get(`/`,(req,res)=>{
+    res.send(`Hii There...`)
+})
 app.listen(port, '0.0.0.0',()=>{
   console.log(`app is running at port ${port}`)
 })
